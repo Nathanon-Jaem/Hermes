@@ -18,4 +18,13 @@ int main(){
 	return 0;
 }
 
+void shuffle(int &a, int &b, int &c, int &d) {
+    int* ptrs[] = {&a, &b, &c, &d};
+    for (int i = 3; i > 0; i--) {
+        int j = rand() % (i + 1);
+        int temp = *ptrs[i];
+        *ptrs[i] = *ptrs[j];
+        *ptrs[j] = temp;
+    }
+}
 //Do not modify source code above this line
